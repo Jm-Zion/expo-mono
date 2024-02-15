@@ -1,0 +1,6 @@
+{
+  "packages/**/*.{ts,tsx,jsx,html,js}": ["eslint"],
+  "packages/**/*.{ts,tsx,jsx,html,js,md,json}": ["prettier"],
+  "app/**/*.{ts,tsx,jsx,html,js}": ["eslint"],
+  "app/**/*.{ts,tsx,jsx,html,js,json,md}": ["prettier"]
+}

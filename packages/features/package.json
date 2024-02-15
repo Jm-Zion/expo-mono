@@ -1,0 +1,21 @@
+{
+  "name": "features",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Jérémy Barbe <jeremy.barbe.zion@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/features.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/features.test.js",
+    "lint": "eslint . && prettier -c .",
+    "lint:fix": "eslint -fix ."
+  }
+}
