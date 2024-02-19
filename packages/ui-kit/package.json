@@ -1,21 +1,80 @@
 {
-  "name": "ui-kit",
+  "name": "@app/ui-kit",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Jérémy Barbe <jeremy.barbe.zion@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/ui-kit.js",
+  "main": "lib/commonjs/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
   ],
   "scripts": {
     "test": "node ./__tests__/ui-kit.test.js",
     "lint": "eslint . && prettier -c .",
-    "lint:fix": "eslint -fix ."
+    "lint:fix": "eslint -fix .",
+    "prepare": "bob build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "7.23.3",
+    "@react-native/babel-preset": "^0.73.21",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/addon-react-native-web": "^0.0.23",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/builder-webpack5": "^7.6.16",
+    "@storybook/react": "^7.6.16",
+    "@storybook/react-vite": "^7.6.16",
+    "@storybook/react-webpack5": "^7.6.16",
+    "@storybook/test": "^7.6.16",
+    "autoprefixer": "^10.4.17",
+    "babel-plugin-react-native-web": "^0.19.10",
+    "file-loader": "^6.2.0",
+    "postcss": "8.4.35",
+    "postcss-loader": "^8.1.0",
+    "prop-types": "^15.8.1",
+    "react-dom": "^18.2.0",
+    "react-native-builder-bob": "^0.23.2",
+    "react-native-web": "^0.19.10",
+    "storybook": "^7.6.16",
+    "tailwindcss": "^3.4.1",
+    "webpack": "^5.90.2"
+  },
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "peerDependencies": {
+    "react-native-reanimated": "^3.7.0"
+  },
+  "dependencies": {
+    "nativewind": "^4.0.1",
+    "react": "^18.2.0",
+    "tailwind-variants": "^0.2.0"
   }
 }

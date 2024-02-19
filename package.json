@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "description": "Monorepo handle ui feature independently from app",
   "workspaces": [
     "packages/*",
     "apps/*"
@@ -27,5 +28,6 @@
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }

@@ -1,7 +1,12 @@
 {
-    "extends": "expo/tsconfig.base",
-    "compilerOptions": {
-        "strict": true
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-native",
+    "baseUrl": ".",
+    "paths": {
+      "@app/ui-kit": ["./packages/ui-kit/src"],
+      "@app/ui-kit/config": ["./packages/ui-kit/tailwind.config.js"]
     }
+  }
 }
-  
